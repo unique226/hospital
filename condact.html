@@ -8,8 +8,10 @@
 </head>
 <body>
     <div id="condact">
-        <DIV   id="form"  >
-            
+        
+        <div   id="form"  >
+           <p style="font-size: 13px;">NOTE:IF YOU ARE NOT IN HOSPITAL YOURE NOT ABLE TO SEND MESSAGE.</p>
+            <br>
             <input type="text" name="NAME" id="username" placeholder="NAME">
             <br>
             <textarea  id="message" cols="30" rows="4" length="100" placeholder="TYPE MESSAGE AND EMAIL HERE" naem></textarea>
@@ -17,7 +19,7 @@
             <button id="send">SEND</button>
             <br><br>
             <button id="send1">BACK</button>
-        </DIV>
+        </div>
     </div>
 </body>
 <script>
@@ -25,6 +27,8 @@
     var message=document.getElementById('message');
     var send=document.getElementById('send');
     var send1=document.getElementById('send1');
+    const usernames=['RAJESH','pandi'];
+
     send.addEventListener('click',function(){
         if(username.value.length < 5 ){
             alert('NAME MUST BE 5 OR MORE')
@@ -33,7 +37,10 @@
             alert('MESSAGE MUST BE 5 OR MORE')
 
         }
+         
         else{
+          
+            if(usernames.includes(username.value)){
             send.style.backgroundSize='300% 300%';
             send.style.background='green';
             send.style.boxShadow='0 0 10px green,0 0 5px black,0 0 20px green';
@@ -51,6 +58,12 @@
             },5000);
             
         }
+          
+    else{
+        alert('NAME IS NOT FOUND IN HOSPITAL')
+    }
+    }
+   
     });
     send1.addEventListener('click',function(){
         history.go(-1);
