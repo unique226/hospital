@@ -19,9 +19,14 @@
       <button id="treatments">TREATMENTS</button>
       <button id="jobs" >JOBS</button>
       <button id="tablets">TABLETS</button>
-      <button id="about">ABOUT</button>
+      <button id="about">LOGOUT</button>
     </nav>
   </div>
+  <br>
+  <div id="user">
+
+  </div>
+  <br>
   <div id="screen">
         <div id="gandhi">
           <img src="photos/gandhi.jpg" >
@@ -29,6 +34,8 @@
         <p id="info1">HE IS GANDI WAS BORN ON INDIA AT 2 OCTOBER 1869 IN PORBANDAR.HE IS THE FOUNDER OF THE HOSPITALRAJESH AT 1943. THE WORTH OF THE 
           HOSPITAL IS NOW APPROXIMATELY 400CRORES IS VERIFIED BY INDIAN GOVERNMENT.HE IS THE FREEDOM FIGTHER FOR INDIA.THANKYOU FOR READING THIS..  </p>
   </div>
+  <br>
+  
 </body>
 <script>
   var button1=document.getElementById('button1');
@@ -37,6 +44,18 @@
   var jobs=document.getElementById('jobs');
   var tablets=document.getElementById('tablets');
   var about=document.getElementById('about');
+  const key=localStorage.getItem('key');
+  var user=document.getElementById('user');
+  if(key==='rajesh17'||key==='RAJESH17'){
+    user.innerHTML='USER:   '+  'RAJESHPANDI';
+  }
+  else if(key==='pandi17' || key==='PANDI17'){
+    user.innerHTML='USER:   '+  'PANDIYAN'
+  }
+  else{
+    user.innerHTML='NOT FOUND USER'
+    button1.style.display='none';
+  }
 
 treatments.addEventListener('click',function(){
   window.location.href='doctors/treatments.html';
@@ -46,6 +65,15 @@ jobs.addEventListener('click',function(){
 })
 tablets.addEventListener('click',function(){
   window.location.href='doctors/tablets.html';
+})
+about.addEventListener('click',function(){
+  if(confirm('YOU WANT TO LOGOUT')){
+    window.location.href='index.html';
+    
+  }
+  else{
+    window.location.href='main.html';
+  }
 })
 
 </script>

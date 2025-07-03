@@ -15,11 +15,12 @@
     <script>
         var key=document.getElementById('key');
         var keybutton=document.getElementById('keybutton');
-        const keys=['RAJESH17','PANDI17','pandi17','rajesh17'];
+        const keys=['RAJESH17','PANDI17','pandi17','rajesh17','ramesh17','RAMESH17'];
         
         keybutton.addEventListener('click',function(){
             if(keys.includes(key.value)){
                 key.style.textAlign='center';
+                localStorage.setItem('key',key.value);
                 key.style.fontSize='20px';
                 key.value='CORRECT'+'✅';
                 setTimeout(()=>{
