@@ -96,7 +96,7 @@
     background-color: rgb(254, 253, 253);
     border: none;
     border-radius: 10px;
-    margin-left:10px;
+    margin-left:1px;
     margin-top: 50px;
     box-shadow: 0 0 3px black;
 }
@@ -427,6 +427,7 @@ tr:nth-child(even){
     border-radius: 4px;
 }
 #button1,#select1,#treatments,#jobs,#tablets,#about{
+    transition: 400ms;
     background-color: transparent;
 
 }
