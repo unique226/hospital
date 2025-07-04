@@ -8,8 +8,8 @@
 </head>
 <body>
     <div id="logindiv">
-        <input type="text" id="key" placeholder="ENTER ID"><br>
-        <button id="keybutton">LOGIN</button>
+        <input type="text" id="key" placeholder="ENTER ID" name="username"><br>
+        <button id="keybutton" type="submit">LOGIN</button>
     </div>   
 </body>
     <script>
@@ -21,8 +21,8 @@
             if(keys.includes(key.value)){
                 key.style.textAlign='center';
                 localStorage.setItem('key',key.value);
-                key.style.fontSize='20px';
-                key.value='CORRECT'+'✅';
+                key.style.fontSize='20px'
+                key.value='CORRECT ✅';
                 setTimeout(()=>{
                     key.value='5';
                 },1000);
