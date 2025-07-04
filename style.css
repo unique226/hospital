@@ -18,7 +18,7 @@
     #navbar{
         width: 100%;
         background-color: black;
-        height: 300px;
+        height: 220px;
          
         border: none;
         box-shadow: 0 0 5px rgba(0,0,0,0.3);
@@ -96,7 +96,7 @@
     background-color: rgb(254, 253, 253);
     border: none;
     border-radius: 10px;
-    margin-left:1px;
+    
     margin-top: 50px;
     box-shadow: 0 0 3px black;
 }
