@@ -73,6 +73,7 @@
     border: none;
     box-shadow: 0 0 10px red,0 0 5px black,0 0 20px red;
 }
+
     img{
         margin-left: 70px;
         margin-top: 10px;
@@ -291,6 +292,13 @@
     transition: 3s;
     border: none;
     box-shadow: 0 0 10px red,0 0 5px black,0 0 20px red;
+}
+#send{
+    margin-top: 40px;
+}
+#send1{
+
+    margin-left: 590px;
 }
 #form{
     width: 400px;
