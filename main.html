@@ -10,7 +10,7 @@
   <div>
     <h1>HOSPITALRAJESH</h1>
     <nav id="navbar">
-      <button id="button1" onclick="window.location=this.value" value="condact.html">COMPLAINT</button>
+      <button id="button1" >COMPLAINT</button>
       <select  id="select1" onchange="window.location.href=this.value">
         <option  hidden>SELECT</option>
         <option value="doctors/gopal.html">GOPAL</option>
@@ -44,16 +44,20 @@
   var jobs=document.getElementById('jobs');
   var tablets=document.getElementById('tablets');
   var about=document.getElementById('about');
+  
   const key=localStorage.getItem('key');
   var user=document.getElementById('user');
   if(key==='rajesh17'||key==='RAJESH17'){
-    user.innerHTML='USER:   '+  'RAJESHPANDI';
+    user.innerText= 'RAJESHPANDI';
   }
   else if(key==='pandi17' || key==='PANDI17'){
-    user.innerHTML='USER:   '+  'PANDIYAN'
+    user.innerText=  'PANDIYAN';
+  }
+  else if(key==='RAMESH17'){
+    user.innerText='RAMESH';
   }
   else{
-    user.innerHTML='NOT FOUND USER'
+    user.innerText='NOT FOUND USER'
     button1.style.display='none';
   }
 
@@ -75,6 +79,9 @@ about.addEventListener('click',function(){
     window.location.href='main.html';
   }
 })
-
+button1.addEventListener('click',function(){
+  localStorage.setItem('users',user.innerText);
+  window.location.href='condact.html';
+})
 </script>
 </html>

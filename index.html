@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="logindiv">
+    <div id="logindiv" role="application">
+      <p style="margin-left: 60px; font-size: 15px;">NOTE:ENTER ALL LETTERS IN CAPITAL <span style="font-size: 14px;color: red;">*</span> </p>
         <input type="text" id="key" placeholder="ENTER ID" name="username"><br>
         <button id="keybutton" type="submit">LOGIN</button>
     </div>   
@@ -15,7 +16,7 @@
     <script>
         var key=document.getElementById('key');
         var keybutton=document.getElementById('keybutton');
-        const keys=['RAJESH17','PANDI17','pandi17','rajesh17','ramesh17','RAMESH17'];
+        const keys=['RAJESH17','PANDI17','RAMESH17'];
         
         keybutton.addEventListener('click',function(){
             if(keys.includes(key.value)){

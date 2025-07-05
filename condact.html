@@ -11,7 +11,7 @@
         
         <form   id="form"  >NOTE:IF YOU ARE NOT IN HOSPITAL YOURE NOT ABLE TO SEND MESSAGE.</p>
             <br>
-            <input type="text" name="NAME" id="username" placeholder="NAME OF PERSON" required>
+            <input type="text" name="NAME" id="username" placeholder="NAME OF PERSON" required="rajesh">
             <br>
            
             <textarea  id="message" cols="30" rows="4" length="100" placeholder="TYPE COMPLAINT..." required name="messages"></textarea>
@@ -19,6 +19,7 @@
             <button id="send" >SEND</button>
             <br><br>
             <button id="send1">BACK</button>
+            
         </form>
     </div>
 </body>
@@ -28,6 +29,8 @@
     var send=document.getElementById('send');
     var send1=document.getElementById('send1');
     const usernames=['RAJESH','rajesh','PANDI','pandi'];
+    const users=localStorage.getItem('users');
+    username.value=users;
 
     send.addEventListener('click',function(){
         if(username.value.length < 5 ){
@@ -39,12 +42,13 @@
         }
          
         else{
-          
-            if(usernames.includes(username.value)){
+          const key=localStorage.getItem('key');
+            if(username.value===users){
               var form=document.getElementById('form');
               form.addEventListener('click',function(){
                 form.method='post';
                 form.action="https://formspree.io/f/xqabozyk";
+                form.submit()
               })
             send.style.backgroundSize='300% 300%';
             send.style.background='green';
@@ -71,7 +75,7 @@
    
     });
     send1.addEventListener('click',function(){
-        history.go(-1);
+        window.location.href='main.html';
     });
 </script>
 </html>
